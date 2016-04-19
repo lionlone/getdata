@@ -9,8 +9,9 @@ header("Expires: 0");
 include('simple_html_dom.php');
 error_reporting(0);
 // khai bai biến
-$url = "https://www.chodientu.vn/do-dung-nha-bep";
-$end = 42;
+$url = "https://www.chodientu.vn/linh-phu-kien-dien-thoai";
+$start = 46;
+$end = 53; // 53
 $out_link_shop_unique = array();
 $out_info_shop_refine = array();
 $link_shop = "";
@@ -21,7 +22,7 @@ $preg_info_shop = '/<li><i (.*)"><\/i>(.*)<\/li>/U';
 $preg_name_shop = '/shop-name"><span>(.*)<\/span>/U';
 //=====
 $url_page[] = $url;
-for ($i=2; $i <= $end; $i++) {
+for ($i=$start; $i <= $end; $i++) {
 	$url_page[] = "$url?trang=$i";
 	foreach ($url_page as $key => $value) {
 		$content = file_get_contents($value);
