@@ -11,7 +11,7 @@ error_reporting(0);
 // khai bai biến
 $url = "https://www.chodientu.vn/thu-cong-my-nghe-do-co-do-suu-tap";
 $start = 1;
-$end = 20; // 53
+$end = 10; // max
 $out_link_shop_unique = array();
 $out_info_shop_refine = array();
 $link_shop = "";
